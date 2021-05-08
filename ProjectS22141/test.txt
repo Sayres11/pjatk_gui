@@ -1,0 +1,41 @@
+SECRET, 1,  1, 7, Wschód, 1 true
+Air force USA, 25,  8, 15, północ, 450 true
+Air force Poland, 33,  8, 13, Południowy, 400 false
+Air force British, 27,  53, 130, północ, 420 false
+Air force Japane, 7,  11, 200, północ, 300 true
+Air force Spain, 5,  4, 10, Zachód, 400 false
+Air force USA, 5,  4, 10, północ, 420 true
+jakis tam samolot , 1,  1, 7, Południowy, 1 true
+Air force USA, 25,  8, 15, Południowy, 159 true
+Air force USA, 33,  8, 13, północ, 159 false
+Cargo, 27,  53, 130, Wschód, 132 300
+DHL, 7,  11, 200, północ, 513 250
+DHL, 5,  4, 10, Południowy, 123 600
+DHL, 5,  4, 10, Południowy, 231 500
+jakis tam samolot , 1,  1, 312, północ, 1 200
+DHL, 25,  8, 15, północ, 132 300
+Poczta, 33,  8, 13, północ, 542 400
+Poczta EURO, 27,  53, 130, północ, 376 300
+Poczta Spain, 7,  11, 200, Zachód, 167 500
+Cargo, 5,  4, 10, Zachód, 159 200
+Air force USA, 5,  4, 10, północ, 256 76
+Fly Emirates, 1,  1, 7, Południowy, 200 300
+LOT, 25,  8, 15, Południowy, 159 200
+Belavia, 33,  8, 13, Wschód, 245 400
+FedEx, 27,  53, 130, Zachód, 345 300
+Fly one, 7,  11, 200, północ, 177 400
+Ryanair, 5,  4, 10, północ, 159 220
+LOT, 5,  4, 10, Południowy, 244 500
+LOT, 25,  8, 15, Południowy, 276 200
+Fly Emirates, 33,  8, 13, północ, 341 400
+FedEx, 27,  53, 130, północ, 159 300
+Fly Emirates, 1,  1, 7, północ, 1 300
+LOT, 25,  8, 15, Południowy, 159 200
+Strażacki, 33,  8, 13, północ, 159 400
+Strażacki, 27,  53, 130, Wschód, 159 300
+Strażacki, 7,  11, 200, Zachód, 555 400
+Strażacki, 5,  4, 10, północ, 422 220
+Strażacki, 5,  4, 10, Południowy, 323 500
+Strażacki, 25,  8, 15, północ, 234 200
+Strażacki, 33,  8, 13, Wschód, 432 400
+Strażacki, 27,  53, 130, północ, 234 300
