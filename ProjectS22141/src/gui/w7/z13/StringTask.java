@@ -1,55 +1,61 @@
 package gui.w7.z13;
 
 public class StringTask implements Runnable {
+    enum TaskState {RUNNING, ABORTED, READY, CREATED}
 
-    enum casee {RUNNING, ABORTED, READY}
-    String sss;
-    char[] ss;
-    int aaa;
+    TaskState taskState;
+    private String result = "";
+    private static String enter;
+    private static char[] en;
+    int repeat;
 
-    public StringTask(String sss, int aaa) {
-        this.sss = sss;
-        this.aaa = aaa;
-        ss = sss.toCharArray();
+    public StringTask(String enter, int repeat) {
+        taskState = TaskState.CREATED;
+        this.enter = enter;
+        this.repeat = repeat;
+        en = enter.toCharArray();
     }
 
-    public void start() {
-        try {
-            sss.toCharArray();
-            for (int j = 0; j < aaa; j++) {
-                for (int i = ss.length ; i > ss.length; i--) {
-                    sss = sss + ss[i];
-                    System.out.println(ss[i]);
-                }
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void start() throws InterruptedException {
+        new Thread(this).start();
+        this.taskState = TaskState.RUNNING;
     }
 
     public void abort() {
-
+        this.taskState = TaskState.ABORTED;
     }
 
     public String getResult() {
-        return sss.toString();
+        return result;
     }
 
-    public casee getState() {
-        return casee.RUNNING;
+    public TaskState getState() {
+        return this.taskState;
     }
 
     public boolean isDone() {
-        return true;
+        if (this.taskState == TaskState.READY) {
+            return true;
+        } else if (this.taskState == TaskState.ABORTED) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public void run() {
-
+        while (taskState != TaskState.READY) {
+            for (int j = 0; j < repeat; j++) {
+                for (int i = en.length - 1; i >= 0; i--) {
+                    result = result + en[i];
+                }
+            }
+            taskState = TaskState.READY;
+        }
     }
 
-    public CharSequence getTxt() {
-        return sss.toString();
+    public String getTxt() {
+        return enter;
     }
 }
