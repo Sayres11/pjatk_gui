@@ -12,10 +12,14 @@ public class Consumer implements Runnable {
         while (true) {
             try {
                 synchronized (b) {
+                    if(b.count == b.size){
+                        System.out.println("tablica jest zakończona ");
+                    }
                     b.get();
                     System.out.println("consumer - debug");
+                    System.out.println(b.get());
+                    Thread.sleep((int) (Math.random() * 2000));
                 }
-                Thread.sleep((int) (Math.random() * 2000));
             } catch (InterruptedException e) {
                 return;
             }

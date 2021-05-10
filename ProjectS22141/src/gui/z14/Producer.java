@@ -13,12 +13,16 @@ public class Producer implements Runnable {
         while (true){
             try {
                 synchronized (b) {
-                    int r = (int) (Math.random() * 1000);
-                    b.put(r);
-                    b.notifyAll();
-                    System.out.println("producer - debug");
+                    if(b.count != b.size) {
+                        int r = (int) (Math.random() * 1000);
+                        b.put(r);
+                        System.out.println(r);
+                        System.out.println("producer - debug");
+                        Thread.sleep(1000);
+                        b.notifyAll();
+                    }
                 }
-                Thread.sleep(1000);
+                //Thread.sleep(10000);
             } catch(InterruptedException e){
                 return;
             }
