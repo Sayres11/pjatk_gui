@@ -10,20 +10,22 @@ public class Producer implements Runnable {
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
             try {
                 synchronized (b) {
-                    if(b.count != b.size) {
-                        int r = (int) (Math.random() * 1000);
-                        b.put(r);
-                        System.out.println(r);
-                        System.out.println("producer - debug");
-                        Thread.sleep(1000);
-                        b.notifyAll();
+                    if(b.count == b.size){
+                        System.out.println("Array is full");
+                        b.notify();
+                        b.wait();
+
                     }
+                    int r = (int) (Math.random() * 1000);
+                    b.put(r);
+                    System.out.println("Producer: " + r);
+                    //System.out.println("producer - debug");
                 }
-                //Thread.sleep(10000);
-            } catch(InterruptedException e){
+                Thread.sleep((int) (Math.random() * 2000));
+            } catch (InterruptedException e) {
                 return;
             }
         }
