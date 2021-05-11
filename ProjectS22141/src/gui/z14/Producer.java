@@ -13,7 +13,7 @@ public class Producer implements Runnable {
         while (true) {
             try {
                 synchronized (b) {
-                    if(b.count == b.size){
+                    if (b.count == b.size) {
                         System.out.println("Array is full");
                         b.notify();
                         b.wait();
@@ -23,8 +23,8 @@ public class Producer implements Runnable {
                     b.put(r);
                     System.out.println("Producer: " + r);
                     //System.out.println("producer - debug");
+                    Thread.sleep((int) (Math.random() * 2000));
                 }
-                Thread.sleep((int) (Math.random() * 2000));
             } catch (InterruptedException e) {
                 return;
             }

@@ -7,8 +7,8 @@ public class Main {
         Producer p = new Producer(b);
         Thread cons = new Thread(c);
         Thread prod = new Thread(p);
-        prod.start();
         cons.start();
+        prod.start();
         try {
             Thread.sleep(15000);
         } catch (InterruptedException e) {
