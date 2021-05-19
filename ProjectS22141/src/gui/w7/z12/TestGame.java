@@ -1,9 +1,4 @@
-
-
 package gui.w7.z12;
-
-import gui.w7.z12.Player;
-import gui.w7.z12.Referee;
 
 public class TestGame {
 

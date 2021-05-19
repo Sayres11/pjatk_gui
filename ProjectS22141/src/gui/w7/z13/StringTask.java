@@ -2,7 +2,7 @@ package gui.w7.z13;
 
 public class StringTask implements Runnable {
     enum TaskState {RUNNING, ABORTED, READY, CREATED}
-
+    StringTask s;
     TaskState taskState;
     private String result = "";
     private static String enter;
@@ -46,12 +46,12 @@ public class StringTask implements Runnable {
     @Override
     public void run() {
         while (taskState != TaskState.READY) {
-            for (int j = 0; j < repeat; j++) {
-                for (int i = en.length - 1; i >= 0; i--) {
-                    result = result + en[i];
+                for (int j = 0; j < repeat; j++) {
+                    for (int i = en.length - 1; i >= 0; i--) {
+                        result = result + en[i];
+                    }
                 }
-            }
-            taskState = TaskState.READY;
+                taskState = TaskState.READY;
         }
     }
 
