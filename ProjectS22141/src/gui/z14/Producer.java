@@ -1,4 +1,4 @@
-package gui.w7.z14;
+package gui.z14;
 
 public class Producer implements Runnable {
     private final Buffer b;

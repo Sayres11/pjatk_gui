@@ -1,7 +1,8 @@
-package gui.w7.z16;
+package gui.z16;
 
 import javax.swing.*;
 import java.awt.*;
+
 
 public class main {
     public static void main(String[] args) {

@@ -34,8 +34,8 @@ public class Transporter extends Thread {
                     } catch (InterruptedException ex) {
                     }
                     for (int j = 1 + wasDeliv; j <= 10 + wasDeliv; j++) {
-                        System.out.println(Storage.storage.get(j) + "    was taken on a board");
-                        Storage.storage.remove(j);
+                        System.out.println(Storage.storage.get(0) + "    was taken on a board");
+                        Storage.storage.remove(0);
                     }
                     wasDeliv += 10L;
                     System.out.println("transporting 10 items");

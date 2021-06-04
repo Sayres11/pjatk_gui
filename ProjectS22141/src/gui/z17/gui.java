@@ -11,12 +11,15 @@ public class gui extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel();
-        mainPanel.setLayout(new BorderLayout());
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
         JTextArea textArea = new JTextArea(10, 20);
         textArea.setText("text");
-        textArea.setPreferredSize(new Dimension(600, 400));
-        mainPanel.add(textArea,BorderLayout.CENTER);
+        JPanel s = new JPanel();
+        s.setLayout(new FlowLayout());
+        textArea.setPreferredSize(new Dimension(720, 300));
+        s.add(textArea);
+        mainPanel.add(s);
 
         final JScrollPane scrollPane = new JScrollPane(textArea);
         mainPanel.add(scrollPane, BorderLayout.CENTER);
@@ -32,7 +35,7 @@ public class gui extends JFrame {
         panelCyfr.setLayout(new GridLayout(2, 3, 2, 2));
 
         JPanel text = new JPanel();
-        text.setLayout(new GridLayout(3,1,2,2));
+        text.setLayout(new GridLayout(3, 1, 2, 2));
 
         JTextField jtextField = new JTextField("pole tekstowe 1");
         text.add(jtextField);
@@ -55,11 +58,12 @@ public class gui extends JFrame {
 
         JButton jb3 = new JButton("3");
         panelCyfr.add(jb3);
-        mainPanel.add(panelCyfr,BorderLayout.NORTH);
+        mainPanel.add(panelCyfr, BorderLayout.NORTH);
 
-frame.setSize(800,600);
+
+        frame.setSize(1024, 720);
         frame.getContentPane().add(mainPanel);
-        frame.setPreferredSize(new Dimension(350, 200));
+        frame.setPreferredSize(new Dimension(720, 500));
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

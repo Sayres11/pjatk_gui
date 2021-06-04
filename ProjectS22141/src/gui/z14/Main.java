@@ -1,4 +1,4 @@
-package gui.w7.z14;
+package gui.z14;
 
 public class Main {
     public static void main(String[] args) {
