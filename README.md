@@ -1,3 +1,1 @@
-System.out.println("Hello");
-
-here are all my assignments from university
+Here are all my assignments from university
